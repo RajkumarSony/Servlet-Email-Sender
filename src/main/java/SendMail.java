@@ -25,19 +25,7 @@ public class SendMail extends HttpServlet {
 		
 		String to= "";
         String sub = req.getParameter("subject");
-        String msg = req.getParameter("msg");
-        
-//        String sub = "OTP Verification Code";
-//        String msg = "Hello Sir/Madam,\n\n"
-//                    + "Thank you for visiting at my OTP based Java App.\n"
-//		+ "Now, you can varify with this OTP\n\n\n"
-//		+ "Your OTP : "+555+"\n\n\n"
-//		+ "---\n"
-//		+ "Regards,\n"
-//		+ "Shaikh Afrin (1CR19MCA13)\n"
-//		+ "OTP based Java App\n"
-//		+ "Email: awesome.afri7991@gmail.com\n"
-//		+ "---";				
+        String msg = req.getParameter("msg");			
 					
         Mailer.send(to, sub, msg);
         
